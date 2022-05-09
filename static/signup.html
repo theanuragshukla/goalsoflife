@@ -3,19 +3,24 @@
 <head>
 	<meta charset="UTF-8">
 	<title></title>
+	<link rel="stylesheet" href="/static/css/style.css">
 </head>
 <body>
 	<div class="super">
-	<div class="signup">
+	<div class="main"><div class="heading">
+		<h1>Create an Account</h1>
+		</div>
+
 	<input id="user" class="inp" type="text" placeholder="username">
 	<input class="inp" id="fname"  type="text" placeholder="firstname">
 	<input class="inp" id="lname" type="text"  placeholder="lastname">
 	<input class="inp" id="email" type="email" placeholder="email">
 	<input class="inp" id="pass" type="password" placeholder="password">
 	<button onclick="signup()">submit</button>
+	<p class="otherLink"><a href="/">already a user ? login</a></p>
 	</div>
-	<p class="login"><a href="/">login</a></p>
 	</div>
 	<script src="/static/js/signup.js"></script>
+	<script src="/static/js/utils.js"></script>
 </body>
 </html>

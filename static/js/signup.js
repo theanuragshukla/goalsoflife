@@ -12,23 +12,24 @@ function signup(){
 		pass:pass.value,
 		user:user.value
 	}
-	alert(user.value)	
-	
-fetch('/add-new-user', {
-  method: 'POST',
-  headers: {
-    'Accept': 'application/json, text/plain, */*',
-    'Content-Type': 'application/json'
-  },
-  body: JSON.stringify( {
-		fname:fname.value,
-		lname:lname.value,
-		email:email.value,
-		pass:pass.value,
-		"user":user.value
+
+	if(checkAll(data)){
+		fetch('/add-new-user', {
+			method: 'POST',
+			headers: {
+				'Accept': 'application/json, text/plain, */*',
+				'Content-Type': 'application/json'
+			},
+			body: JSON.stringify( {
+				fname:fname.value,
+				lname:lname.value,
+				email:email.value,
+				pass:pass.value,
+				"user":user.value
+			})
 		})
-})
-	.then(res=>res.json())
-	.then(res=>console.log(res))
+			.then(res=>res.json())
+			.then(res=>console.log(res))
+	}
 	
 }
