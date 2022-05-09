@@ -2,7 +2,10 @@ const { Pool } = require("pg");
 require("dotenv").config(); //get environment vars.
 const connectionString = process.env.PSQL_CONNECTION;
 const pool = new Pool({
-  connectionString,
+	connectionString: connectionString,
+	ssl: {
+    rejectUnauthorized: false
+  }
 });
 
 //export query function
